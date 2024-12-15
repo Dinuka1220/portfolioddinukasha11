@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>personal portfolio website dinuka</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            /* Styling for .navbar2 links */
+
+            .header2 {
+                display: flex;
+                align-items: center;
+                padding: 1rem 2rem;
+                background-color: #0d2d43; /* Change this to any background color you want */
+            }
+             /* Logo styling */
+    .logo2 {
+        font-size: 2.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding-right: 2rem;
+        margin-left: 8rem;
+    }
+
+    /* Navbar styling */
+    .navbar2 {
+        display: flex;
+        flex: 1; /* Allows the navbar to take up remaining space */
+        justify-content: flex-end; /* Aligns links to the right */
+        gap: 3.5rem; /* Spacing between links */
+        margin-top:1rem ;
+        margin-right: 9rem;
+    }
+
+    /* Styling for navbar links */
+    .navbar2 a {
+        font-size: 1.7rem;
+        color: var(--text-color, #fff); /* Default to white if --text-color is not set */
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Active and hover states for links */
+    .navbar2 a:hover, 
+    .navbar2 a.active {
+        color: #00abf0;
+    }
+
+
+
+    
+    /* Header styling */
+    .header2 {
+        position: fixed;      /* Fixes the header to the top */
+        top: 0;               /* Aligns the header to the top of the page */
+        width: 100%;          /* Makes the header span the full width */
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #0d2d43; /* Adjust background color as needed */
+        z-index: 1000;        /* Ensures the header stays above other content */
+    }
+
+    /* Logo styling */
+    .logo2 {
+        font-size: 2.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding-right: 2rem;
+        margin-left: 8rem;
+    }
+
+    /* Navbar styling */
+    .navbar2 {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 3.5rem;
+        margin-right: 9rem;
+    }
+
+    /* Navbar link styling */
+    .navbar2 a {
+        font-size: 1.7rem;
+        color: var(--text-color, #fff);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Active and hover states for links */
+    .navbar2 a:hover, 
+    .navbar2 a.active {
+        color: #00abf0;
+    }
+
+    /* To prevent content from hiding behind the fixed header */
+     /* Responsive styling for mobile screens */
+     @media (max-width: 768px) {
+        .header2 {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem;
+        }
+
+        .logo2 {
+            font-size: 2rem;
+            margin-left: 0; /* Center the logo for mobile */
+        }
+
+        .navbar2 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-right: 0;
+        }
+
+        .navbar2 a {
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Additional adjustments for extra small screens */
+    @media (max-width: 480px) {
+        .logo2 {
+            font-size: 1.8rem;
+        }
+
+        .navbar2 a {
+            font-size: 1.3rem;
+        }
+
+        body {
+            margin-top: 70px; /* Adjusting for the smaller header size */
+        }
+    }
+
+    /* Base styling for paragraph */
+.about-content p {
+    position: relative;
+    font-size: 1.6rem;
+    margin:2rem 0rem;
+    margin-left: 50rem;
+    justify-content: left;
+    text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content p {
+        font-size: 1.4rem;   /* Smaller font for tablet screens */
+        line-height: 1.5;
+        padding: 0 1rem;     /* Adds padding to avoid edge-to-edge text */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content p {
+        font-size: 1.2rem;   /* Smaller font for mobile screens */
+        line-height: 1.4;
+        padding: 0 1.5rem;   /* More padding for better readability on small screens */
+    }
+}
+
+ 
+
+
+
+
+
+        </style>
+    </head>
+</html>
+<body>
+    <header class="header2">
+        <a href="#" class="logo2" style="background: #0d2d43">Dinuka.</a>
+
+        <nav class="navbar2">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">About</a>
+            <a href="#">portfolio</a>
+            <a href="#contact" id="contact-link">Contact</a>
+        </nav>
+ 
+    </header>
+    <section class="about" id="about" >
+        <h2 class="heading" style="margin-top: 20rem;">about<span>Me</span></h2>
+
+        <div class="about-content">
+            <h3>Fullstack Developer</h3>
+            <p>Hello! I'm Dinuka Shalinda, a passionate and driven full-stack developer with a knack for crafting dynamic, responsive, and user-friendly web applications. With a solid foundation in both front-end and back-end development, I specialize in building seamless experiences from concept to deployment. Over the years, I've worked with various tools and technologies, continuously expanding my expertise to meet the evolving needs of the digital world. Whether I’m developing with the latest frameworks or diving into complex backend solutions, I strive to create efficient and scalable applications that solve real-world problems. Let's connect and bring ideas to life</p>
+            <div class="btn-box btns">
+                <a href="#education" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="home-sciabt2">
+            <a href="https://web.facebook.com/dinuka.shalinda.77"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.linkedin.com/in/dinuka-shalinda-31427a290/"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+        </div> 
+
+        <!-- <div class="about-imgHover"></div> -->
+
+
+    </section>
+      <!-- Education -->
+
+    <section class="education" id="education" style="height: 80rem;">
+        <h2 class="heading" style="margin-left: 2rem; margin-top: 20rem;">My <span>Journey</span>   </h2>
+        <div class="education-row" style="margin-bottom: .1rem;">
+            <div class="education-column" >
+                <h3 class="title" style="margin-top: 8rem;">Education </h3>
+                <div class="education-box" >
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>BICT(hons)</h3>
+                            <p>Undergraduateffffffffffffffffff
+                                dffffffffffff
+                                fddddddddddddd
+                                fddddddddddddddddddddd
+                                fddddddddddddddd
+                            </p>
+                        </div>
+                     </div>
+
+                     <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>BICT(hons)</h3>
+                            <p>Undergradundergraduateffffffffffffffffff
+                                dffffffffffff
+                                fddddddddddddd
+                                fddddddddddddddddddddd
+                                fdddddddddddddddate</p>
+                        </div>
+                     </div>
+
+
+                     <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>BICT(hons)</h3>
+                            <p>Undergrndergraduateffffffffffffffffff
+                                dffffffffffff
+                                fddddddddddddd
+                                fddddddddddddddddddddd
+                                fdddddddddddddddaduate</p>
+                        </div>
+                     </div>
+
+
+                </div>
+            </div>
+
+          <!-- Experience -->
+
+            <div class="education-column">
+                <h3 class="title" style="margin-top: 8rem" >Experience </h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>BICT(hons)</h3>
+                            <p>Undergndergraduateffffffffffffffffff
+                                dffffffffffff
+                                fddddddddddddd
+                                fddddddddddddddddddddd
+                                fdddddddddddddddraduate</p>
+                        </div>
+                     </div>
+
+                     <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>BICT(hons)</h3>
+                            <p>Underndergraduateffffffffffffffffff
+                                dffffffffffff
+                                fddddddddddddd
+                                fddddddddddddddddddddd
+                                fdddddddddddddddgraduate</p>
+                        </div>
+                     </div>
+
+
+                     <div class="education-content">
+                        <div class="content" style="margin-bottom: 40rem;">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>BICT(hons)</h3>
+                            <p>Undergndergraduateffffffffffffffffff
+                                dffffffffffff
+                                fddddddddddddd
+                                fddddddddddddddddddddd
+                                fdddddddddddddddraduate</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- skills section design -->
+     <section class="skills" id="skills">
+        <h2 class="heading" style="margin-top: .1rem; margin-bottom: 10rem;" >My <span>Skills</span></h2>
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>CSS <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>JavaScript <span>65%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Python <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Web Design <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Web Development <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Graphic Design <span>65%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>SEO Markating <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+     </section>
+
+     
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact<span>Me!</span></h2>
+    
+        <form id="contactForm" action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" required >
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off" required >
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Mobile Number" id="mobile_num" class="item" autocomplete="off" required >
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email Subject" id="email_sub" class="item" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off" ></textarea>
+            </div>
+    
+            <div class="btn-box btns" style="margin-left: 28rem;">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    
+        <!-- Only include SMTP.js once -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </section>
+    
+    <script>
+        // document.getElementById("contactForm").addEventListener("submit", function(event) {
+        //     event.preventDefault(); // Prevent form from reloading the page
+    
+            // const name = document.getElementById("name").value;
+            // const email = document.getElementById("Email").value;
+            // const mobile = document.getElementById("mobile_num").value;
+            // const subject = document.getElementById("email_sub").value;
+            // const message = document.getElementById("message").value;
+            const form = document.querySelector("form");
+const fullname = document.getElementById("name");
+const email = document.getElementById("email");
+const mobileNumber = document.getElementById("mobile_num");
+const emailSubject = document.getElementById("email_sub");
+const yourMessage = document.getElementById("message");
+
+function sendEmail() {
+    const bodyMessage = `Full Name: ${fullname.value}<br>Email: ${email.value}<br>Phone Number: ${mobileNumber.value}<br>Message: ${yourMessage.value}`;
+
+    Email.send({
+        SecureToken:"3d1c11b2-5a95-4d76-a54a-ff0f698d47e4",
+        Username: "20dinuka@gmail.com",
+        Password: "83D50B007141B37399D5472936669FE62907",
+        To: "20dinuka@gmail.com",
+        From: "20dinuka@gmail.com",
+        Subject: emailSubject.value,
+        Body: bodyMessage
+    }).then(
+        message => {
+            console.log("Response from email server:", message); // For debugging
+            if (message === "OK") { // Check case-sensitive response
+                Swal.fire({
+                    title: "Success!",
+                    text: "Message sent successfully!",
+                    icon: "success"
+                });
+            } else {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Failed to send the message. Please try again.",
+                    icon: "error"
+                });
+            }
+        }
+    ).catch(
+        error => {
+            console.error("Error sending email:", error); // For debugging
+            Swal.fire({
+                title: "Error!",
+                text: "An error occurred while sending the email. Please try again.",
+                icon: "error"
+            });
+        }
+    );
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    sendEmail();
+
+    form.reset();
+    return false;
+});
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
+
+
+</body>
