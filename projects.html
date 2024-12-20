@@ -117,63 +117,169 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            backdrop-filter: blur(8px);
         }
 
         .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 600px;
+            background: #081b29;
             width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            overflow: hidden;
             position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: 3px solid #00abf0;
         }
 
         .close-modal {
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            background: #00abf0;
+            border: none;
+            border-radius: 50%;
             cursor: pointer;
-            color: #1a365d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2;
         }
 
-        .modal-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .close-modal:hover {
+            transform: rotate(90deg);
+            background: #fff;
+        }
+
+        .close-modal::before,
+        .close-modal::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #081b29;
+        }
+
+        .close-modal::before {
+            transform: rotate(45deg);
+        }
+
+        .close-modal::after {
+            transform: rotate(-45deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+            color: #fff;
         }
 
         .modal-title {
-            color: #1a365d;
-            font-size: 1.8rem;
+            color: #00abf0;
+            font-size: 2.5rem;
             margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .modal-description {
-            color: #333;
-            margin-bottom: 20px;
+            color: #e0e0e0;
+            font-size: 1.1rem;
             line-height: 1.6;
+            margin-bottom: 25px;
         }
 
         .modal-tags {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .tag {
-            background: #1a365d;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
+            background: rgba(0, 171, 240, 0.1);
+            color: #00abf0;
+            padding: 8px 16px;
+            border-radius: 50px;
             font-size: 0.9rem;
+            border: 1px solid #00abf0;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: #00abf0;
+            color: #081b29;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .modal-btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .live-btn {
+            background: #00abf0;
+            color: #081b29;
+        }
+
+        .live-btn:hover {
+            background: #0090cc;
+            transform: translateY(-2px);
+        }
+
+        .code-btn {
+            border: 2px solid #00abf0;
+            color: #00abf0;
+        }
+
+        .code-btn:hover {
+            background: rgba(0, 171, 240, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Icon styles */
+        .btn-icon {
+            width: 20px;
+            height: 20px;
         }
 
         
@@ -203,132 +309,155 @@
                 </header>
 
     <div class="projects-container">
-        <div class="project" data-category="web">
-            <img src="ims.JPG" alt="Inventory Management system">
+        
+        <div class="project" data-project="Inventory Management System" data-category="web">
+            <img src="ims.JPG" alt="Inventory Management System">
             <div class="project-overlay">
-                <h3 class="project-title">Inventory Management system</h3>
+                <h3 class="project-title">Inventory Management System</h3>
                 <p class="project-category">Web Application</p>
             </div>
         </div>
 
-        <div class="project" data-category="web">
+        <div class="project" data-category="web" data-project="Hostal Management System">
             <img src="HMS.JPG" alt="Hostal Management System">
             <div class="project-overlay">
-                <h3 class="project-title">Inventory Management system</h3>
+                <h3 class="project-title">Hostal Management System</h3>
                 <p class="project-category">Web Application</p>
             </div>
         </div>
 
-        <div class="project" data-category="web">
+        <div class="project" data-category="web" data-project="Bhuddist Society website">
             <img src="buddhist.JPG" alt="Bhuddist Society website">
             <div class="project-overlay">
-                <h3 class="project-title">Inventory Management system</h3>
+                <h3 class="project-title">Bhuddist Society website</h3>
                 <p class="project-category">Web Application</p>
             </div>
         </div>
 
-        <div class="project" data-category="ui">
-            <img src="/api/placeholder/350/250" alt="Finance Dashboard">
-            <div class="project-overlay">
-                <h3 class="project-title">Finance Dashboard</h3>
-                <p class="project-category">UI/UX Design</p>
-            </div>
-        </div>
-
-        <div class="project" data-category="mobile">
-            <img src="/api/placeholder/350/250" alt="Fitness App">
-            <div class="project-overlay">
-                <h3 class="project-title">Fitness Tracker App</h3>
-                <p class="project-category">Mobile Application</p>
-            </div>
-        </div>
-    </div>
-
+        
+<!-- Modal -->
     <div class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img class="modal-image" src="" alt="Project Image">
-            <h2 class="modal-title"></h2>
-            <p class="modal-description"></p>
-            <div class="modal-tags"></div>
+            <div class="modal-header">
+                <img src="" alt="Project Preview" class="modal-image">
+                <button class="close-modal"></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title"></h2>
+                <p class="modal-description"></p>
+                <div class="modal-tags"></div>
+                <div class="modal-actions">
+                    <a href="#" class="modal-btn live-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        View Live
+                    </a>
+                    <a href="#" class="modal-btn code-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         // Project data
         const projectData = {
-            "E-Commerce Platform": {
-                description: "A full-stack e-commerce solution with user authentication, product management, shopping cart, and payment integration.",
-                tags: ["React", "Node.js", "MongoDB", "Stripe"],
-                image: "/api/placeholder/600/400"
-            },
-            "Finance Dashboard": {
-                description: "Modern finance dashboard design with intuitive user interface, real-time data visualization, and responsive layout.",
-                tags: ["Figma", "Adobe XD", "Sketch"],
-                image: "/api/placeholder/600/400"
-            },
-            "Fitness Tracker App": {
-                description: "Cross-platform mobile application for tracking workouts, nutrition, and fitness goals.",
-                tags: ["React Native", "Firebase", "Redux"],
-                image: "/api/placeholder/600/400"
-            }
-        };
+                "Inventory Management System": {
+                    title: "Inventory Management System",
+                    description: "A robust inventory management system for tracking stock and orders.",
+                    tags: ["php","HTML", "CSS", "JavaScript"],
+                    image: "ims.JPG",
+                    liveLink: "#",
+                    codeLink: "#"
+                },
+                "Hostal Management System": {
+                    title: "Hostal Management System",
+                    description: "Modern Hostal Management System design with intuitive UI.",
+                    tags: ["Figma", "HTML", "CSS", "JavaScript","php"],
+                    image: "HMS.jpg",
+                    liveLink: "#",
+                    codeLink: "#"
+                },
+                "Bhuddist Society website": {
+                    title: "Bhuddist Society website",
+                    description: " Bhuddist Society website design with intuitive UI for Faculty of Technology University of Colombo",
+                    tags: ["Figma", "HTML", "CSS", "JavaScript"],
+                    image: "buddhist2.jpg",
+                    liveLink: "#",
+                    codeLink: "#"
+                },
 
-        // Filter functionality
-        const filterBtns = document.querySelectorAll(".filter-btn");
-        const projects = document.querySelectorAll(".project");
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                filterBtns.forEach(b => b.classList.remove("active"));
-                btn.classList.add("active");
-
-                const category = btn.getAttribute("data-category");
                 
-                projects.forEach(project => {
-                    if (category === "all" || project.getAttribute("data-category") === category) {
-                        project.style.display = "block";
-                    } else {
-                        project.style.display = "none";
-                    }
-                });
-            });
-        });
+            };
 
-        // Modal functionality
-        const modal = document.querySelector(".modal");
-        const modalImage = modal.querySelector(".modal-image");
-        const modalTitle = modal.querySelector(".modal-title");
-        const modalDescription = modal.querySelector(".modal-description");
-        const modalTags = modal.querySelector(".modal-tags");
-        const closeModal = modal.querySelector(".close-modal");
+ 
 
-        projects.forEach(project => {
-            project.addEventListener("click", () => {
-                const title = project.querySelector(".project-title").textContent;
-                const data = projectData[title];
+        // Enhanced Modal Functionality
+                    const modal = document.querySelector(".modal");
+                    const modalImage = modal.querySelector(".modal-image");
+                    const modalTitle = modal.querySelector(".modal-title");
+                    const modalDescription = modal.querySelector(".modal-description");
+                    const modalTags = modal.querySelector(".modal-tags");
+                    const closeModal = modal.querySelector(".close-modal");
 
-                modalImage.src = data.image;
-                modalTitle.textContent = title;
-                modalDescription.textContent = data.description;
-                
-                modalTags.innerHTML = data.tags
-                    .map(tag => `<span class="tag">${tag}</span>`)
-                    .join("");
+                    document.querySelectorAll(".project").forEach(project => {
+                        project.addEventListener("click", () => {
+                            const projectId = project.getAttribute("data-project");
+                            const data = projectData[projectId];
 
-                modal.style.display = "flex";
-            });
-        });
+                            if (data) {
+                                modalImage.src = data.image;
+                                modalTitle.textContent = data.title;
+                                modalDescription.textContent = data.description;
 
-        closeModal.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
+                                modalTags.innerHTML = data.tags
+                                    .map(tag => `<span class="tag">${tag}</span>`)
+                                    .join("");
 
-        window.addEventListener("click", (e) => {
-            if (e.target === modal) {
+                                modal.style.display = "flex";
+                            }
+                        });
+                    });
+
+            // Close modal functionality
+            closeModal.addEventListener("click", () => {
                 modal.style.display = "none";
-            }
-        });
+            });
+
+            window.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+                // Keep your existing filter functionality
+                const filterBtns = document.querySelectorAll(".filter-btn");
+                const projects = document.querySelectorAll(".project");
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        filterBtns.forEach(b => b.classList.remove("active"));
+                        btn.classList.add("active");
+
+                        const category = btn.getAttribute("data-category");
+                        
+                        projects.forEach(project => {
+                            if (category === "all" || project.getAttribute("data-category") === category) {
+                                project.style.display = "block";
+                            } else {
+                                project.style.display = "none";
+                            }
+                        });
+                    });
+                });
     </script>
 </body>
 </html>
